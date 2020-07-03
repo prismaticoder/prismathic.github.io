@@ -23,9 +23,10 @@ email: pjjsalam@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Jesutomiwa's blog - Software Developer, Electrical Engineer | 💻💡
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://blog.jesutomiwa.me" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://blog.jesutomiwa.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Prismatic
 github_username:  prismathic
+comments: true
 
 # Build settings
 theme: minima

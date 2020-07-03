@@ -2,6 +2,7 @@
 layout: post
 title:  "Performing Cloudinary Uploads From Vue.js Applications"
 date:   2020-06-29 08:40:33 +0100
+comments: true
 ---
 ### Basic Requirements
 
@@ -11,11 +12,13 @@ date:   2020-06-29 08:40:33 +0100
 ### What is Cloudinary?
 
 <!-- Enter cloudinary Logo here -->
-Cloudinary is a Software-as-a-Service (SaaS) platform for executing realtime image processing and delivery. An advantage of using Cloudinary in your applications is that is makes use of a Content Delivery Network (CDN) for serving images thus increasing site speed and performance. Cloudinary also handles storage for all media types so you don't have to worry about storing them on your server and consuming memory.
+> Cloudinary is a Software-as-a-Service (SaaS) platform for executing realtime image processing and delivery. An advantage of using Cloudinary in your applications is that is makes use of a Content Delivery Network (CDN) for serving images thus increasing site speed and performance. Cloudinary also handles storage for all media types so you don't have to worry about storing them on your server and consuming memory.
+
+![Cloudinary Logo](/assets/cloudinary_logo.png)
 
 ### What are we trying to achieve?
 
-In this post, we will be uploading an image to Cloudinary from a Vue.js frontend and then saving the link to the image in a MySQL database by sending a `POST` request to a backend API bulit with Node and Express.
+> In this post, we will be uploading an image to Cloudinary from a Vue.js frontend and then saving the link to the image in a MySQL database by sending a `POST` request to a backend API bulit with Node and Express.
 
 ### Let's Begin...
 <!-- Insert Shall we GIF here -->
@@ -106,7 +109,7 @@ app.post('/images', async (req, res) => {
 We have now created a simple API endpoint for posting a Cloudinary image URL to our database. You can now proceed to setting upload presets on your Cloudinary account:
 
 When uploading to cloudinary, you'll want to set certain parameters for how your uploads should be transformed/optimized, the folder you want to upload to and many more options.
-* First, log in to Cloudinary and copy your `API Base URL` from the dashboard. It's somewhat of this sort: `https://api.cloudinary.com/v1_1/*your-cloudinary-username*`
+* First, log in to Cloudinary and copy your `API Base URL` from the dashboard. It's somewhat of this sort: `https://api.cloudinary.com/v1_1/*YOUR-CLOUDINARY-USERNAME*`
 * The next thing you want to do is to add an unsigned upload preset. This will enable us to upload to cloudinary directly from the browser:
     - Click the settings(⚙) icon on your dashboard, and from there, proceed to the "Upload" tab.
      ![Cloudinary Upload](/assets/cloudinary-settings.PNG)
@@ -220,8 +223,8 @@ export default {
         },
         uploadImage() {
             let formData = new FormData();
-            let uploadPreset = "your-upload-preset"
-            let cloudinaryUrl = "your-api-base-url"
+            let uploadPreset = "YOUR-UPLOAD-PRESET"
+            let cloudinaryUrl = "CLOUDINARY-API-BASE-URL"
 
             formData.append('file', this.image);
             formData.append('upload_preset', uploadPreset)
@@ -256,5 +259,32 @@ Let us carefully consider the steps followed in the script:
  3. We executed a `POST` request to the Cloudinary API base URL we copied earlier with a body of `formData`.
  4. We retrieved the newly uploaded image's URL from the `secure_url` property of the response object and we posted that to our API backend listening on port 3000
 
+ Having done that, you can check your cloudinary dashboard and you'll see your new image uploaded there.
+
+ Thanks for reading 😊
+
 [cloudinary-signup]: https://cloudinary.com
 [Sequelize]: https://sequelize.io
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = http://blog.jesutomiwa.me/2020/06/29/performing-cloudinary-uploads.html  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://prismatic-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Performing Cloudinary Uploads From Vue.js Applications"
+title:  "Uploading Images to Cloudinary from Vue.js Applications"
 date:   2020-06-29 08:40:33 +0100
 comments: true
 ---
@@ -14,7 +14,7 @@ comments: true
 <!-- Enter cloudinary Logo here -->
 > Cloudinary is a Software-as-a-Service (SaaS) platform for executing realtime image processing and delivery. An advantage of using Cloudinary in your applications is that is makes use of a Content Delivery Network (CDN) for serving images thus increasing site speed and performance. Cloudinary also handles storage for all media types so you don't have to worry about storing them on your server and consuming memory.
 
-![Cloudinary Logo](/assets/cloudinary_logo.png)
+![Cloudinary Logo](/assets/cloudinary-logo.png)
 
 ### What are we trying to achieve?
 

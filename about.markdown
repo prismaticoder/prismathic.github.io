@@ -4,26 +4,14 @@ title: About
 permalink: /about/
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+My name is Jesutomiwa Salam. 
 
-<div class="container">
-  <h1>WORK IN PROGRESS</h1>
+I am:
 
-  <p><strong>Page Under Construction :)</strong></p>
-  <p>This page is currently under construction. You'll be the first to know when there is an update 😊</p>
-</div>
+- A Software Developer (NodeJS, Express, VueJS, Laravel, HTML, CSS)
+- An aspiring Electrical Engineer
 
+Favourite tech quote:
 
-[jekyll-organization]: https://github.com/jekyll
+> I don't want to build stuff that's normal - Sarah Drasner
+

@@ -18,15 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Jesutomiwa Salam | My Personal Website
-email: pjjsalam1999@gmail.com
+title: Jesutomiwa Salam | My Blog
+email: pjjsalam@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to the personal website of Jesutomiwa Salam - Software Developer,
-  Clean Code Advocate, Electrical Engineer and builder of awesome stuffs :)
-  P.S I hate queues...
+  Welcome to Jesutomiwa's blog - Software Developer, Electrical Engineer | 💻💡
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jesutomiwa.me" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Prismaticode
+url: "https://blog.jesutomiwa.me" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: Prismatic
 github_username:  prismathic
 
 # Build settings

@@ -27,7 +27,8 @@ url: "http://blog.jesutomiwa.me" # the base hostname & protocol for your site, e
 twitter_username: Prismatic
 github_username:  prismathic
 comments: true
-
+disqus:
+  shortname: prismatic-blog
 # Build settings
 theme: minima
 plugins:

@@ -3,7 +3,10 @@ layout: post
 title:  "Uploading Images to Cloudinary from Vue.js Applications"
 date:   2020-06-29 08:40:33 +0100
 comments: true
+image: "/assets/cloudinary-logo.png"
+description: "In this post, we will be uploading an image to Cloudinary from a Vue.js frontend and then saving the link to the image..."
 ---
+
 ### Basic Requirements
 
 * A Cloudinary account. Sign up [here][cloudinary-signup] if you do not have one
